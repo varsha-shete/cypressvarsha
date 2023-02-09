@@ -1,0 +1,18 @@
+pipeline {
+    agent {
+        docker { 
+			image 'cypress/included:12.5.0'
+			args '--entrypoint=/bin/bash'
+			args '-u root'
+		}
+    }
+    stages {
+        stage('Test') {
+            steps {
+                sh '''cypress --version
+                cypress verify 
+		'''
+            }
+        }
+    }
+}
