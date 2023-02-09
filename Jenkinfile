@@ -12,6 +12,7 @@ pipeline {
                 sh '''cypress --version
                 cypress verify
 		npm -v
+		npm install
 		'''
             }
         }
