@@ -12,7 +12,7 @@ pipeline {
                 sh '''cypress --version
                 cypress verify
 		npm -v
-		npm install
+		cypress run -s cypress/e2e/test.cy.js
 		'''
             }
         }
