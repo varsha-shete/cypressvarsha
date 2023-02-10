@@ -13,7 +13,7 @@ pipeline {
                 cypress verify
 		pwd
 		ls -lrt
-		docker run --help
+		
 		'''
             }
         }
